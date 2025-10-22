@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ăn gì đây ta?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chọn món thôi bấy bề !!!</h1>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Tìm kiếm món ăn em muốn ở đây nè">
+                <button id="search-btn">Tìm món nè</button>
+                <div id="search-suggestions" class="search-suggestions"></div>
+            </div>
+        </header>
+        <section class="filter-section">
+            <select id="category-filter">
+                <option value="">Tất cả danh mục</option>
+            </select>
+            <select id="meal-time-filter">
+                <option value="">Tất cả bữa</option>
+            </select>
+        </section>
+        <section class="random-dish">
+            <button id="random-btn">🤔 Ăn gì cũng được 🤔</button>
+            <button id="toggle-random-filters">Tùy chọn lọc nâng cao</button>
+            <div class="random-filters hidden" id="random-filters">
+                <div class="filter-group">
+                    <h3>Lọc danh mục (Đỏ là đang được chọn)</h3>
+                    <div id="random-category-filters" class="multi-select-filters"></div>
+                </div>
+                <div class="filter-group">
+                    <h3>Lọc bữa ăn</h3>
+                    <div id="random-meal-time-filters" class="multi-select-filters"></div>
+                </div>
+                <button id="apply-random-filters">Áp dụng</button>
+            </div>
+            <div id="dish-result" class="dish-card hidden">
+                <h2>🍽 Và món của bạn làaa:</h2>
+                <h3 id="dish-name"></h3>
+                <p id="dish-category"></p>
+                <p id="dish-meal-time"></p>
+            </div>
+        </section>
+        <section class="skipped-dishes">
+            <h2>Món đã bỏ qua</h2>
+            <div id="skipped-dishes-container"></div>
+        </section>
+        <section class="dish-list">
+            <h2>🍝🍜🍲 Danh sách món ăn 🍛🍚🍰</h2>
+            <div id="dishes-container" class="dishes-grid"></div>
+        </section>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
